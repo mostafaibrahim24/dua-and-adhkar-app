@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <array name="preloaded_fonts" translatable="false">
+        <item>@font/</item>
+        <item>@font/almarai_light</item>
+        <item>@font/aref_ruqaa</item>
+        <item>@font/gothic_a1_semibold</item>
+        <item>@font/gothic_a1_thin</item>
+        <item>@font/montserrat</item>
+    </array>
+</resources>

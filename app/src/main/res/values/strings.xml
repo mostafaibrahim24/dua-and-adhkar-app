@@ -1,0 +1,10 @@
+<resources>
+    <string name="app_name">Dua and Adhkar</string>
+    <string name="morning_adhkar">Morning Adhkar</string>
+    <string name="evening_adhkar">Evening Adhkar</string>
+    <string name="daily_essential_dua">Daily Essential Dua</string>
+    <string name="dua_begins_with_rabbana">Dua begins with Rabbana</string>
+    <string name="ruquiya">Ruquiya</string>
+    <string name="missed_procedure">Missed Rak\'ah Procedure</string>
+    <string name="hajj_and_umrah">Hajj and Umrah</string>
+</resources>
