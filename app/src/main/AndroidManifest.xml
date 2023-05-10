@@ -12,9 +12,6 @@
         android:theme="@style/Theme.Duaandadhkar"
         tools:targetApi="31">
         <activity
-            android:name=".MorningAdhkarActivity"
-            android:exported="false" />
-        <activity
             android:name=".MainActivity"
             android:exported="true">
             <intent-filter>
@@ -23,6 +20,17 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <activity
+            android:name=".MorningAdhkarActivity"
+            android:label="Morning Adhkar"
+            android:parentActivityName=".MainActivity"
+            android:exported="false" />
+        <activity
+            android:name=".RuquiyaActivity"
+            android:label="Ruquiya"
+            android:parentActivityName=".MainActivity"
+            android:exported="false"/>
+
 
         <meta-data
             android:name="preloaded_fonts"

@@ -104,6 +104,7 @@
             android:layout_marginStart="8dp"
             android:layout_marginTop="12dp"
             android:backgroundTint="#00FFFFFF"
+            android:onClick="launchRuquiya"
             android:scaleType="fitCenter"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.932"

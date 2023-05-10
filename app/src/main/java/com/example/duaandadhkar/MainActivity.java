@@ -20,4 +20,9 @@ public class MainActivity extends AppCompatActivity {
         Intent intent = new Intent(this, MorningAdhkarActivity.class);
         startActivity(intent);
     }
+
+    public void launchRuquiya(View view){
+        Intent intent = new Intent(this, RuquiyaActivity.class);
+        startActivity(intent);
+    }
 }
