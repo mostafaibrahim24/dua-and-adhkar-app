@@ -19,7 +19,7 @@ public class MorningAdhkarActivity extends AppCompatActivity {
     private MediaPlayer mediaPlayer;
     private MyDatabaseHelper myDatabaseHelper;
 
-    private final int numOfAudios=2;
+    private final int numOfAudios=3;
     private int[] audiosSeekPos = new int[numOfAudios];
 
     private int[] audiosIds = new int[numOfAudios];
@@ -36,17 +36,17 @@ public class MorningAdhkarActivity extends AppCompatActivity {
         myDatabaseHelper = new MyDatabaseHelper(this);
         mediaPlayer = new MediaPlayer();
 
-        audiosIds = new int[]{R.raw.audio_01,
-                              R.raw.audio_02};
-        playButtonsIds = new int[]{R.id.playButton01,R.id.playButton02};
-        pauseButtonsIds = new int[]{R.id.pauseButton01,R.id.pauseButton02};
-        stopButtonsIds = new int[]{R.id.stopButton01,R.id.stopButton02};
+        audiosIds = new int[]{R.raw.audio_01,R.raw.audio_02,R.raw.audio_03};
+        playButtonsIds = new int[]{R.id.playButton01,R.id.playButton02,R.id.playButton03};
+        pauseButtonsIds = new int[]{R.id.pauseButton01,R.id.pauseButton02,R.id.pauseButton03};
+        stopButtonsIds = new int[]{R.id.stopButton01,R.id.stopButton02,R.id.stopButton03};
 
         for (int i = 0; i < numOfAudios; i++) {
             InputStream inputStream = getResources().openRawResource(audiosIds[i]);
             try {
                 byte[] audioData = new byte[inputStream.available()];
-                String audioName = String.format(Locale.ENGLISH,"audio_%2d",i);
+                String audioName = String.format("%02d",i+1);
+                audioName="audio_"+audioName;
                 inputStream.read(audioData);
                 myDatabaseHelper.insertBlobData(audioData,audioName);
             } catch (IOException e) {
