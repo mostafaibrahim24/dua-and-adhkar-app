@@ -22,6 +22,8 @@ public class MorningAdhkarActivity extends AppCompatActivity {
     // STATE: OFF, PAUSE
     private int[] audiosNums;
     private String[] audiosState = new String[2];
+
+    private int[] audiosSeekPos = new int[2];
     @SuppressLint("UseCompatLoadingForDrawables")
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -66,7 +68,8 @@ public class MorningAdhkarActivity extends AppCompatActivity {
         stopButton02.setEnabled(false);
         stopButton02.setImageDrawable(getDrawable(R.drawable.baseline_stop_circle_disable_45));
 
-
+        audiosSeekPos[0]=0;
+        audiosSeekPos[1]=0;
 
     }
     @SuppressLint("UseCompatLoadingForDrawables")
@@ -90,17 +93,19 @@ public class MorningAdhkarActivity extends AppCompatActivity {
         PLAY
         * */
 
-        if(Objects.equals(audiosState[setNumberIndex], "PAUSE")){
-            if (!mediaPlayer.isPlaying()) {
-                mediaPlayer.start();
-            }
-        }else if(Objects.equals(audiosState[setNumberIndex], "OFF")) {
+//        if(Objects.equals(audiosState[setNumberIndex], "PAUSE")){
+//            if (!mediaPlayer.isPlaying()) {
+//                mediaPlayer.start();
+//            }
+//        }else
+            if(Objects.equals(audiosState[setNumberIndex], "OFF")||Objects.equals(audiosState[setNumberIndex], "PAUSE")) {
             try {
                 //            mediaPlayer.setDataSource(getApplicationContext(), Uri.parse("android.resource://" + getPackageName() + "/" + R.raw.audio_01));
                 byte[] audioData = myDatabaseHelper.getBlobData("audio_" + setNumber);
                 ByteArrayInputStream inputStream = new ByteArrayInputStream(audioData);
                 mediaPlayer.setDataSource(new ByteArrayMediaDataSource(audioData));
                 mediaPlayer.prepare();
+                mediaPlayer.seekTo(audiosSeekPos[setNumberIndex]);
                 mediaPlayer.start();
             } catch (IOException e) {
                 e.printStackTrace();
@@ -149,8 +154,10 @@ public class MorningAdhkarActivity extends AppCompatActivity {
         /*
         pause the audio
         * */
-        mediaPlayer.pause();
+        audiosSeekPos[setNumberIndex]=mediaPlayer.getCurrentPosition();
+        mediaPlayer.stop();
         audiosState[setNumberIndex]="PAUSE";
+        mediaPlayer = new MediaPlayer();
 
         playButton.setEnabled(true);
         playButton.setImageDrawable(getDrawable(R.drawable.baseline_play_circle_45));
@@ -183,6 +190,7 @@ public class MorningAdhkarActivity extends AppCompatActivity {
         /*
         stop the audio (reset to initial state)
         * */
+        audiosSeekPos[setNumberIndex]=0;
         mediaPlayer.stop();
         audiosState[setNumberIndex]="OFF";
         mediaPlayer = new MediaPlayer();
