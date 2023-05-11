@@ -12,18 +12,22 @@ import android.widget.ImageButton;
 import java.io.ByteArrayInputStream;
 import java.io.IOException;
 import java.io.InputStream;
+import java.util.Locale;
 import java.util.Objects;
 
 public class MorningAdhkarActivity extends AppCompatActivity {
     private MediaPlayer mediaPlayer;
     private MyDatabaseHelper myDatabaseHelper;
 
-    private final int numOfAudios=1;
-    // STATE: OFF, PAUSE
-    private int[] audiosNums;
-    private String[] audiosState = new String[2];
+    private final int numOfAudios=2;
+    private int[] audiosSeekPos = new int[numOfAudios];
 
-    private int[] audiosSeekPos = new int[2];
+    private int[] audiosIds = new int[numOfAudios];
+
+    //buttons ids
+    private int[] playButtonsIds = new int[numOfAudios];
+    private int[] pauseButtonsIds = new int[numOfAudios];
+    private int[] stopButtonsIds = new int[numOfAudios];
     @SuppressLint("UseCompatLoadingForDrawables")
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -31,45 +35,38 @@ public class MorningAdhkarActivity extends AppCompatActivity {
         setContentView(R.layout.activity_morning_adhkar_activity);
         myDatabaseHelper = new MyDatabaseHelper(this);
         mediaPlayer = new MediaPlayer();
-        InputStream inputStream1 = getResources().openRawResource(R.raw.audio_01);
-        try {
-            byte[] audioData1 = new byte[inputStream1.available()];
-            String audioName1 = "audio_01";
-            inputStream1.read(audioData1);
-            myDatabaseHelper.insertBlobData(audioData1,audioName1);
-            audiosState[0]="OFF";
-        } catch (IOException e) {
-            throw new RuntimeException(e);
-        }
-        InputStream inputStream2 = getResources().openRawResource(R.raw.audio_02);
-        try {
-            byte[] audioData2 = new byte[inputStream2.available()];
-            String audioName2 = "audio_02";
-            inputStream2.read(audioData2);
-            myDatabaseHelper.insertBlobData(audioData2,audioName2);
-            audiosState[1]="OFF";
-        } catch (IOException e) {
-            throw new RuntimeException(e);
+
+        audiosIds = new int[]{R.raw.audio_01,
+                              R.raw.audio_02};
+        playButtonsIds = new int[]{R.id.playButton01,R.id.playButton02};
+        pauseButtonsIds = new int[]{R.id.pauseButton01,R.id.pauseButton02};
+        stopButtonsIds = new int[]{R.id.stopButton01,R.id.stopButton02};
+
+        for (int i = 0; i < numOfAudios; i++) {
+            InputStream inputStream = getResources().openRawResource(audiosIds[i]);
+            try {
+                byte[] audioData = new byte[inputStream.available()];
+                String audioName = String.format(Locale.ENGLISH,"audio_%2d",i);
+                inputStream.read(audioData);
+                myDatabaseHelper.insertBlobData(audioData,audioName);
+            } catch (IOException e) {
+                throw new RuntimeException(e);
+            }
         }
 
-        ImageButton playButton01 = findViewById(R.id.playButton01);
-        ImageButton pauseButton01 = findViewById(R.id.pauseButton01);
-        pauseButton01.setEnabled(false);
-        pauseButton01.setImageDrawable(getDrawable(R.drawable.baseline_pause_circle_disable_45));
-        ImageButton stopButton01 = findViewById(R.id.stopButton01);
-        stopButton01.setEnabled(false);
-        stopButton01.setImageDrawable(getDrawable(R.drawable.baseline_stop_circle_disable_45));
-        /////////////////////////////////////////////////////////////////
-        ImageButton playButton02 = findViewById(R.id.playButton02);
-        ImageButton pauseButton02 = findViewById(R.id.pauseButton02);
-        pauseButton02.setEnabled(false);
-        pauseButton02.setImageDrawable(getDrawable(R.drawable.baseline_pause_circle_disable_45));
-        ImageButton stopButton02 = findViewById(R.id.stopButton02);
-        stopButton02.setEnabled(false);
-        stopButton02.setImageDrawable(getDrawable(R.drawable.baseline_stop_circle_disable_45));
+        for (int i = 0; i < numOfAudios; i++) {
+            ImageButton playButton = findViewById(playButtonsIds[i]);
+            ImageButton pauseButton = findViewById(pauseButtonsIds[i]);
+            pauseButton.setEnabled(false);
+            pauseButton.setImageDrawable(getDrawable(R.drawable.baseline_pause_circle_disable_45));
+            ImageButton stopButton = findViewById(stopButtonsIds[i]);
+            stopButton.setEnabled(false);
+            stopButton.setImageDrawable(getDrawable(R.drawable.baseline_stop_circle_disable_45));
+        }
 
-        audiosSeekPos[0]=0;
-        audiosSeekPos[1]=0;
+        for (int i = 0; i < numOfAudios; i++) {
+            audiosSeekPos[i]=0;
+        }
 
     }
     @SuppressLint("UseCompatLoadingForDrawables")
@@ -81,26 +78,12 @@ public class MorningAdhkarActivity extends AppCompatActivity {
         String setNumber = Character.toString(viewIdStr.charAt(viewIdStr.length()-2))+Character.toString(viewIdStr.charAt(viewIdStr.length()-1));
         int setNumberIndex = Integer.parseInt(setNumber)-1;
         // pause button
-        String pauseButtonIdStr = "pauseButton"+setNumber;
-
-        int pauseButtonId = getResources().getIdentifier(pauseButtonIdStr, "id","com.example.duaandadhkar");
-        ImageButton pauseButton = findViewById(pauseButtonId);
+        ImageButton pauseButton = findViewById(pauseButtonsIds[setNumberIndex]);
         //stop button
-        String stopButtonIdStr = "stopButton"+setNumber;
-        int stopButtonId = getResources().getIdentifier(stopButtonIdStr, "id","com.example.duaandadhkar");
-        ImageButton stopButton = findViewById(stopButtonId);
-        /*
-        PLAY
-        * */
+        ImageButton stopButton = findViewById(stopButtonsIds[setNumberIndex]);
 
-//        if(Objects.equals(audiosState[setNumberIndex], "PAUSE")){
-//            if (!mediaPlayer.isPlaying()) {
-//                mediaPlayer.start();
-//            }
-//        }else
-            if(Objects.equals(audiosState[setNumberIndex], "OFF")||Objects.equals(audiosState[setNumberIndex], "PAUSE")) {
-            try {
-                //            mediaPlayer.setDataSource(getApplicationContext(), Uri.parse("android.resource://" + getPackageName() + "/" + R.raw.audio_01));
+
+        try {
                 byte[] audioData = myDatabaseHelper.getBlobData("audio_" + setNumber);
                 ByteArrayInputStream inputStream = new ByteArrayInputStream(audioData);
                 mediaPlayer.setDataSource(new ByteArrayMediaDataSource(audioData));
@@ -110,7 +93,7 @@ public class MorningAdhkarActivity extends AppCompatActivity {
             } catch (IOException e) {
                 e.printStackTrace();
             }
-        }
+
         mediaPlayer.setOnCompletionListener(new MediaPlayer.OnCompletionListener() {
             @Override
             public void onCompletion(MediaPlayer mp) {
@@ -143,20 +126,13 @@ public class MorningAdhkarActivity extends AppCompatActivity {
         String setNumber = Character.toString(viewIdStr.charAt(viewIdStr.length()-2))+Character.toString(viewIdStr.charAt(viewIdStr.length()-1));
         int setNumberIndex = Integer.parseInt(setNumber)-1;
         //play button
-        String playButtonIdStr = "playButton"+setNumber;
-
-        int playButtonId = getResources().getIdentifier(playButtonIdStr, "id","com.example.duaandadhkar");
-        ImageButton playButton = findViewById(playButtonId);
+        ImageButton playButton = findViewById(playButtonsIds[setNumberIndex]);
         //stop button
-        String stopButtonIdStr = "stopButton"+setNumber;
-        int stopButtonId = getResources().getIdentifier(stopButtonIdStr, "id","com.example.duaandadhkar");
-        ImageButton stopButton = findViewById(stopButtonId);
-        /*
-        pause the audio
-        * */
+        ImageButton stopButton = findViewById(stopButtonsIds[setNumberIndex]);
+
+
         audiosSeekPos[setNumberIndex]=mediaPlayer.getCurrentPosition();
         mediaPlayer.stop();
-        audiosState[setNumberIndex]="PAUSE";
         mediaPlayer = new MediaPlayer();
 
         playButton.setEnabled(true);
@@ -178,21 +154,16 @@ public class MorningAdhkarActivity extends AppCompatActivity {
         String setNumber = Character.toString(viewIdStr.charAt(viewIdStr.length()-2))+Character.toString(viewIdStr.charAt(viewIdStr.length()-1));
         int setNumberIndex = Integer.parseInt(setNumber)-1;
         //play button
-        String playButtonIdStr = "playButton"+setNumber;
-        int playButtonId = getResources().getIdentifier(playButtonIdStr, "id","com.example.duaandadhkar");
-        ImageButton playButton = findViewById(playButtonId);
+        ImageButton playButton = findViewById(playButtonsIds[setNumberIndex]);
         // pause button
-        String pauseButtonIdStr = "pauseButton"+setNumber;
-
-        int pauseButtonId = getResources().getIdentifier(pauseButtonIdStr, "id","com.example.duaandadhkar");
-        ImageButton pauseButton = findViewById(pauseButtonId);
+        ImageButton pauseButton = findViewById(pauseButtonsIds[setNumberIndex]);
 
         /*
         stop the audio (reset to initial state)
         * */
         audiosSeekPos[setNumberIndex]=0;
         mediaPlayer.stop();
-        audiosState[setNumberIndex]="OFF";
+
         mediaPlayer = new MediaPlayer();
 
         playButton.setEnabled(true);
