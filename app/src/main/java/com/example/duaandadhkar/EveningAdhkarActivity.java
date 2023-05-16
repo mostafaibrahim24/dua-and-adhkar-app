@@ -1,21 +1,18 @@
 package com.example.duaandadhkar;
 
-import androidx.appcompat.app.AppCompatActivity;
-
 import android.annotation.SuppressLint;
-import android.media.MediaDataSource;
 import android.media.MediaPlayer;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.ImageButton;
 
+import androidx.appcompat.app.AppCompatActivity;
+
 import java.io.ByteArrayInputStream;
 import java.io.IOException;
 import java.io.InputStream;
-import java.util.Locale;
-import java.util.Objects;
 
-public class MorningAdhkarActivity extends AppCompatActivity {
+public class EveningAdhkarActivity extends AppCompatActivity {
     private MediaPlayer mediaPlayer;
     private MyDatabaseHelper myDatabaseHelper;
 
@@ -32,14 +29,14 @@ public class MorningAdhkarActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_morning_adhkar_activity);
+        setContentView(R.layout.activity_evening_adhkar_activity);
         myDatabaseHelper = new MyDatabaseHelper(this);
         mediaPlayer = new MediaPlayer();
 
-        audiosIds = new int[]{R.raw.audio_01,R.raw.audio_02,R.raw.audio_03,R.raw.audio_04,R.raw.audio_05,
-                              R.raw.audio_06,R.raw.audio_07,R.raw.audio_08,R.raw.audio_09,R.raw.audio_10,
-                              R.raw.audio_11,R.raw.audio_12,R.raw.audio_13,R.raw.audio_14,R.raw.audio_15,
-                              R.raw.audio_16,R.raw.audio_17,R.raw.audio_18,R.raw.audio_19,R.raw.audio_20,R.raw.audio_21,R.raw.audio_22};
+        audiosIds = new int[]{R.raw.audio_01,R.raw.audio_02,R.raw.e_audio_03,R.raw.e_audio_04,R.raw.audio_05,
+                              R.raw.e_audio_06,R.raw.e_audio_07,R.raw.audio_08,R.raw.audio_09,R.raw.audio_10,
+                              R.raw.audio_11,R.raw.audio_12,R.raw.audio_13,R.raw.audio_14,R.raw.e_audio_15,
+                              R.raw.e_audio_16,R.raw.audio_17,R.raw.audio_18,R.raw.audio_19,R.raw.audio_20,R.raw.audio_21,R.raw.audio_22};
         playButtonsIds = new int[]{R.id.playButton01,R.id.playButton02,R.id.playButton03,R.id.playButton04,R.id.playButton05,
                                    R.id.playButton06,R.id.playButton07,R.id.playButton08,R.id.playButton09,R.id.playButton10,
                                    R.id.playButton11,R.id.playButton12,R.id.playButton13,R.id.playButton14,R.id.playButton15,
@@ -59,6 +56,9 @@ public class MorningAdhkarActivity extends AppCompatActivity {
                 byte[] audioData = new byte[inputStream.available()];
                 String audioName = String.format("%02d",i+1);
                 audioName="audio_"+audioName;
+                if(i+1 == 3 || i+1 == 4 || i+1 == 6 || i+1 == 7 || i+1 == 15 || i+1 == 16){
+                    audioName="e_"+audioName;
+                }
                 inputStream.read(audioData);
                 myDatabaseHelper.insertBlobData(audioData,audioName);
             } catch (IOException e) {
@@ -96,7 +96,12 @@ public class MorningAdhkarActivity extends AppCompatActivity {
 
 
         try {
-                byte[] audioData = myDatabaseHelper.getBlobData("audio_" + setNumber);
+                byte[] audioData;
+                if(setNumberIndex+1 == 3 || setNumberIndex+1 == 4 || setNumberIndex+1 == 6 || setNumberIndex+1 == 7 || setNumberIndex+1 == 15 || setNumberIndex+1 == 16){
+                    audioData = myDatabaseHelper.getBlobData("e_audio_" + setNumber);
+                }else{
+                    audioData = myDatabaseHelper.getBlobData("audio_" + setNumber);
+                }
                 ByteArrayInputStream inputStream = new ByteArrayInputStream(audioData);
                 mediaPlayer.setDataSource(new ByteArrayMediaDataSource(audioData));
                 mediaPlayer.prepare();

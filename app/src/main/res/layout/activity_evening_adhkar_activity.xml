@@ -58,7 +58,7 @@
             android:layout_width="290dp"
             android:layout_height="wrap_content"
             android:fontFamily="sans-serif-condensed"
-            android:text="@string/morning_adhkar_3"
+            android:text="@string/evening_adhkar_3"
             android:textColor="@color/app_main_color"
             android:textSize="20sp"
             app:layout_constraintEnd_toEndOf="parent"
@@ -280,14 +280,14 @@
             android:layout_width="290dp"
             android:layout_height="wrap_content"
             android:fontFamily="sans-serif-condensed"
-            android:text="@string/morning_adhkar_4"
+            android:text="@string/evening_adhkar_4"
             android:textColor="@color/app_main_color"
             android:textSize="20sp"
+            app:layout_constraintBottom_toTopOf="@id/set4"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.504"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/divider3"
-            app:layout_constraintBottom_toTopOf="@id/set4"/>
+            app:layout_constraintTop_toBottomOf="@id/divider3" />
         <LinearLayout
             android:id="@+id/set4"
             android:layout_width="300dp"
@@ -443,14 +443,14 @@
             android:layout_width="290dp"
             android:layout_height="wrap_content"
             android:fontFamily="sans-serif-condensed"
-            android:text="@string/morning_adhkar_6"
+            android:text="@string/evening_adhkar_6"
             android:textColor="@color/app_main_color"
             android:textSize="20sp"
+            app:layout_constraintBottom_toTopOf="@id/set6"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.504"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/divider5"
-            app:layout_constraintBottom_toTopOf="@id/set6"/>
+            app:layout_constraintTop_toBottomOf="@id/divider5" />
         <LinearLayout
             android:id="@+id/set6"
             android:layout_width="300dp"
@@ -525,14 +525,14 @@
             android:layout_width="290dp"
             android:layout_height="wrap_content"
             android:fontFamily="sans-serif-condensed"
-            android:text="@string/morning_adhkar_7"
+            android:text="@string/evening_adhkar_7"
             android:textColor="@color/app_main_color"
             android:textSize="20sp"
+            app:layout_constraintBottom_toTopOf="@id/set7"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.504"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/divider6"
-            app:layout_constraintBottom_toTopOf="@id/set7"/>
+            app:layout_constraintTop_toBottomOf="@id/divider6" />
         <LinearLayout
             android:id="@+id/set7"
             android:layout_width="300dp"
@@ -1181,14 +1181,14 @@
             android:layout_width="290dp"
             android:layout_height="wrap_content"
             android:fontFamily="sans-serif-condensed"
-            android:text="@string/morning_adhkar_15"
+            android:text="@string/evening_adhkar_15"
             android:textColor="@color/app_main_color"
             android:textSize="20sp"
+            app:layout_constraintBottom_toTopOf="@id/set15"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.504"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/divider14"
-            app:layout_constraintBottom_toTopOf="@id/set15"/>
+            app:layout_constraintTop_toBottomOf="@id/divider14" />
         <LinearLayout
             android:id="@+id/set15"
             android:layout_width="300dp"
@@ -1263,14 +1263,14 @@
             android:layout_width="290dp"
             android:layout_height="wrap_content"
             android:fontFamily="sans-serif-condensed"
-            android:text="@string/morning_adhkar_16"
+            android:text="@string/evening_adhkar_16"
             android:textColor="@color/app_main_color"
             android:textSize="20sp"
+            app:layout_constraintBottom_toTopOf="@id/set16"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.504"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/divider15"
-            app:layout_constraintBottom_toTopOf="@id/set16"/>
+            app:layout_constraintTop_toBottomOf="@id/divider15" />
         <LinearLayout
             android:id="@+id/set16"
             android:layout_width="300dp"

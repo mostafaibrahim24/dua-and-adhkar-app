@@ -26,6 +26,11 @@
             android:parentActivityName=".MainActivity"
             android:exported="false" />
         <activity
+            android:name=".EveningAdhkarActivity"
+            android:label="Evening Adhkar"
+            android:parentActivityName=".MainActivity"
+            android:exported="false" />
+        <activity
             android:name=".RuquiyaActivity"
             android:label="Ruquiya"
             android:parentActivityName=".MainActivity"
