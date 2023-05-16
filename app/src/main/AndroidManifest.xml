@@ -22,20 +22,34 @@
         </activity>
         <activity
             android:name=".MorningAdhkarActivity"
+            android:exported="false"
             android:label="Morning Adhkar"
-            android:parentActivityName=".MainActivity"
-            android:exported="false" />
+            android:parentActivityName=".MainActivity" />
         <activity
             android:name=".EveningAdhkarActivity"
+            android:exported="false"
             android:label="Evening Adhkar"
-            android:parentActivityName=".MainActivity"
-            android:exported="false" />
+            android:parentActivityName=".MainActivity" />
+        <activity
+            android:name=".DuaBeginsWithRabbanaActivity"
+            android:exported="false"
+            android:label="40 Dua from Quran begins with Rabbana"
+            android:parentActivityName=".MainActivity" />
         <activity
             android:name=".RuquiyaActivity"
+            android:exported="false"
             android:label="Ruquiya"
-            android:parentActivityName=".MainActivity"
-            android:exported="false"/>
-
+            android:parentActivityName=".MainActivity" />
+        <activity
+            android:name=".HajjAndUmrahActivity"
+            android:exported="false"
+            android:label="Hajj and Umrah"
+            android:parentActivityName=".MainActivity" />
+        <activity
+            android:name=".MissedRakahProcedureActivity"
+            android:exported="false"
+            android:label="Missed Rak&apos;ah Procedure"
+            android:parentActivityName=".MainActivity" />
 
         <meta-data
             android:name="preloaded_fonts"

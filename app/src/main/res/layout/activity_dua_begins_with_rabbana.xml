@@ -8,67 +8,22 @@
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        tools:context=".EveningAdhkarActivity">
+        tools:context=".DuaBeginsWithRabbanaActivity">
         <TextView
-            android:id="@+id/textView1_1"
+            android:id="@+id/textView1"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="32dp"
             android:fontFamily="sans-serif-condensed"
-            android:text="@string/morning_adhkar_1_1"
+            android:text="@string/dua40_1"
             android:textColor="@color/app_main_color"
             android:textSize="20sp"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.5"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintBottom_toTopOf="@id/textView1_2"/>
-
-        <TextView
-            android:id="@+id/textView1_2"
-            android:layout_width="290dp"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="12dp"
-            android:fontFamily="sans-serif-condensed"
-            android:text="@string/morning_adhkar_1_2"
-            android:textColor="@color/app_main_color"
-            android:textSize="20sp"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.5"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/textView1_1"
-            app:layout_constraintBottom_toTopOf="@id/set1"/>
-
-        <TextView
-            android:id="@+id/textView2_1"
-            android:layout_width="290dp"
-            android:layout_height="wrap_content"
-            android:fontFamily="sans-serif-condensed"
-            android:text="@string/morning_adhkar_2_1"
-            android:textColor="@color/app_main_color"
-            android:textSize="20sp"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.504"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/divider1"
-            app:layout_constraintBottom_toTopOf="@id/set2"/>
-
-        <TextView
-            android:id="@+id/textView3"
-            android:layout_width="290dp"
-            android:layout_height="wrap_content"
-            android:fontFamily="sans-serif-condensed"
-            android:text="@string/evening_adhkar_3"
-            android:textColor="@color/app_main_color"
-            android:textSize="20sp"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.494"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/divider2"
-            app:layout_constraintBottom_toTopOf="@id/set3"/>
-
+            app:layout_constraintTop_toTopOf="parent"/>
         <LinearLayout
-            android:id="@+id/set3"
+            android:id="@+id/set1"
             android:layout_width="300dp"
             android:layout_height="wrap_content"
             android:layout_weight="1"
@@ -77,69 +32,13 @@
             android:orientation="horizontal"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/textView3">
-            <LinearLayout
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:gravity="center">
-                <ImageButton
-                    android:id="@+id/playButton03"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:backgroundTint="#00FFFFFF"
-                    android:contentDescription="Play"
-                    android:onClick="playAudio"
-                    android:src="@drawable/baseline_play_circle_45" />
-            </LinearLayout>
-            <LinearLayout
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:gravity="center">
-                <ImageButton
-                    android:id="@+id/pauseButton03"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:backgroundTint="#00FFFFFF"
-                    android:contentDescription="Pause"
-                    android:onClick="pauseAudio"
-                    android:src="@drawable/baseline_pause_circle_45" />
-            </LinearLayout>
-            <LinearLayout
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:gravity="center">
-                <ImageButton
-                    android:id="@+id/stopButton03"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:backgroundTint="#00FFFFFF"
-                    android:contentDescription="Stop"
-                    android:onClick="stopAudio"
-                    android:src="@drawable/baseline_stop_circle_45" />
-            </LinearLayout>
-        </LinearLayout>
-
-
-        <LinearLayout
-            android:id="@+id/set1"
-            android:layout_width="300dp"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:orientation="horizontal"
             app:layout_constraintBottom_toTopOf="@+id/divider1"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/textView1_2">
-
+            app:layout_constraintTop_toBottomOf="@+id/textView1">
             <LinearLayout
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:gravity="center">
-
                 <ImageButton
                     android:id="@+id/playButton01"
                     android:layout_width="wrap_content"
@@ -149,13 +48,11 @@
                     android:onClick="playAudio"
                     android:src="@drawable/baseline_play_circle_45" />
             </LinearLayout>
-
             <LinearLayout
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:gravity="center">
-
                 <ImageButton
                     android:id="@+id/pauseButton01"
                     android:layout_width="wrap_content"
@@ -165,13 +62,11 @@
                     android:onClick="pauseAudio"
                     android:src="@drawable/baseline_pause_circle_45" />
             </LinearLayout>
-
             <LinearLayout
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:gravity="center">
-
                 <ImageButton
                     android:id="@+id/stopButton01"
                     android:layout_width="wrap_content"
@@ -183,16 +78,40 @@
             </LinearLayout>
         </LinearLayout>
 
+        <View
+            android:id="@+id/divider1"
+            android:layout_width="409dp"
+            android:layout_height="1dp"
+            android:layout_marginTop="4dp"
+            android:background="?android:attr/listDivider"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/set1"
+            app:layout_constraintBottom_toTopOf="@id/textView2"/>
+
+        <TextView
+            android:id="@+id/textView2"
+            android:layout_width="290dp"
+            android:layout_height="wrap_content"
+            android:fontFamily="sans-serif-condensed"
+            android:text="@string/dua40_2"
+            android:textColor="@color/app_main_color"
+            android:textSize="20sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.504"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/divider1"
+            app:layout_constraintBottom_toTopOf="@id/set2"/>
         <LinearLayout
             android:id="@+id/set2"
             android:layout_width="300dp"
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:orientation="horizontal"
-            app:layout_constraintBottom_toTopOf="@id/textView3"
+            app:layout_constraintBottom_toTopOf="@+id/divider1"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/textView2_1">
+            app:layout_constraintTop_toBottomOf="@+id/textView2">
 
             <LinearLayout
                 android:layout_width="0dp"
@@ -209,7 +128,6 @@
                     android:onClick="playAudio"
                     android:src="@drawable/baseline_play_circle_45" />
             </LinearLayout>
-
             <LinearLayout
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
@@ -225,7 +143,6 @@
                     android:onClick="pauseAudio"
                     android:src="@drawable/baseline_pause_circle_45" />
             </LinearLayout>
-
             <LinearLayout
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
@@ -244,26 +161,87 @@
         </LinearLayout>
 
         <View
-            android:id="@+id/divider1"
-            android:layout_width="409dp"
-            android:layout_height="1dp"
-            android:layout_marginTop="3dp"
-            android:background="?android:attr/listDivider"
-            app:layout_constraintBottom_toTopOf="@+id/textView2_1"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/set1" />
-
-        <View
             android:id="@+id/divider2"
             android:layout_width="409dp"
             android:layout_height="1dp"
             android:layout_marginTop="4dp"
             android:background="?android:attr/listDivider"
-            app:layout_constraintBottom_toTopOf="@+id/textView3"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/set2" />
+            app:layout_constraintTop_toBottomOf="@+id/set2"
+            app:layout_constraintBottom_toTopOf="@id/textView3"/>
+
+        <TextView
+            android:id="@+id/textView3"
+            android:layout_width="290dp"
+            android:layout_height="wrap_content"
+            android:fontFamily="sans-serif-condensed"
+            android:text="@string/dua40_3"
+            android:textColor="@color/app_main_color"
+            android:textSize="20sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.504"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/divider2"
+            app:layout_constraintBottom_toTopOf="@id/set3"/>
+        <LinearLayout
+            android:id="@+id/set3"
+            android:layout_width="300dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="horizontal"
+            app:layout_constraintBottom_toTopOf="@+id/divider2"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textView3">
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center">
+
+                <ImageButton
+                    android:id="@+id/playButton03"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:backgroundTint="#00FFFFFF"
+                    android:contentDescription="Play"
+                    android:onClick="playAudio"
+                    android:src="@drawable/baseline_play_circle_45" />
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center">
+
+                <ImageButton
+                    android:id="@+id/pauseButton03"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:backgroundTint="#00FFFFFF"
+                    android:contentDescription="Pause"
+                    android:onClick="pauseAudio"
+                    android:src="@drawable/baseline_pause_circle_45" />
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center">
+
+                <ImageButton
+                    android:id="@+id/stopButton03"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:backgroundTint="#00FFFFFF"
+                    android:contentDescription="Stop"
+                    android:onClick="stopAudio"
+                    android:src="@drawable/baseline_stop_circle_45" />
+            </LinearLayout>
+        </LinearLayout>
+
         <View
             android:id="@+id/divider3"
             android:layout_width="409dp"
@@ -280,14 +258,14 @@
             android:layout_width="290dp"
             android:layout_height="wrap_content"
             android:fontFamily="sans-serif-condensed"
-            android:text="@string/evening_adhkar_4"
+            android:text="@string/dua40_4"
             android:textColor="@color/app_main_color"
             android:textSize="20sp"
-            app:layout_constraintBottom_toTopOf="@id/set4"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.504"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/divider3" />
+            app:layout_constraintTop_toBottomOf="@id/divider3"
+            app:layout_constraintBottom_toTopOf="@id/set4"/>
         <LinearLayout
             android:id="@+id/set4"
             android:layout_width="300dp"
@@ -345,6 +323,7 @@
                     android:src="@drawable/baseline_stop_circle_45" />
             </LinearLayout>
         </LinearLayout>
+
         <View
             android:id="@+id/divider4"
             android:layout_width="409dp"
@@ -361,7 +340,7 @@
             android:layout_width="290dp"
             android:layout_height="wrap_content"
             android:fontFamily="sans-serif-condensed"
-            android:text="@string/morning_adhkar_5"
+            android:text="@string/dua40_5"
             android:textColor="@color/app_main_color"
             android:textSize="20sp"
             app:layout_constraintEnd_toEndOf="parent"
@@ -443,14 +422,14 @@
             android:layout_width="290dp"
             android:layout_height="wrap_content"
             android:fontFamily="sans-serif-condensed"
-            android:text="@string/evening_adhkar_6"
+            android:text="@string/dua40_6"
             android:textColor="@color/app_main_color"
             android:textSize="20sp"
-            app:layout_constraintBottom_toTopOf="@id/set6"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.504"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/divider5" />
+            app:layout_constraintTop_toBottomOf="@id/divider5"
+            app:layout_constraintBottom_toTopOf="@id/set6"/>
         <LinearLayout
             android:id="@+id/set6"
             android:layout_width="300dp"
@@ -525,14 +504,14 @@
             android:layout_width="290dp"
             android:layout_height="wrap_content"
             android:fontFamily="sans-serif-condensed"
-            android:text="@string/evening_adhkar_7"
+            android:text="@string/dua40_7"
             android:textColor="@color/app_main_color"
             android:textSize="20sp"
-            app:layout_constraintBottom_toTopOf="@id/set7"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.504"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/divider6" />
+            app:layout_constraintTop_toBottomOf="@id/divider6"
+            app:layout_constraintBottom_toTopOf="@id/set7"/>
         <LinearLayout
             android:id="@+id/set7"
             android:layout_width="300dp"
@@ -590,7 +569,7 @@
                     android:src="@drawable/baseline_stop_circle_45" />
             </LinearLayout>
         </LinearLayout>
-<!--      COMMENT- -->
+
         <View
             android:id="@+id/divider7"
             android:layout_width="409dp"
@@ -607,7 +586,7 @@
             android:layout_width="290dp"
             android:layout_height="wrap_content"
             android:fontFamily="sans-serif-condensed"
-            android:text="@string/morning_adhkar_8"
+            android:text="@string/dua40_8"
             android:textColor="@color/app_main_color"
             android:textSize="20sp"
             app:layout_constraintEnd_toEndOf="parent"
@@ -672,7 +651,7 @@
                     android:src="@drawable/baseline_stop_circle_45" />
             </LinearLayout>
         </LinearLayout>
-        <!--      COMMENT- -->
+
         <View
             android:id="@+id/divider8"
             android:layout_width="409dp"
@@ -689,7 +668,7 @@
             android:layout_width="290dp"
             android:layout_height="wrap_content"
             android:fontFamily="sans-serif-condensed"
-            android:text="@string/morning_adhkar_9"
+            android:text="@string/dua40_9"
             android:textColor="@color/app_main_color"
             android:textSize="20sp"
             app:layout_constraintEnd_toEndOf="parent"
@@ -754,7 +733,7 @@
                     android:src="@drawable/baseline_stop_circle_45" />
             </LinearLayout>
         </LinearLayout>
-        <!--      COMMENT- -->
+
         <View
             android:id="@+id/divider9"
             android:layout_width="409dp"
@@ -771,7 +750,7 @@
             android:layout_width="290dp"
             android:layout_height="wrap_content"
             android:fontFamily="sans-serif-condensed"
-            android:text="@string/morning_adhkar_10"
+            android:text="@string/dua40_10"
             android:textColor="@color/app_main_color"
             android:textSize="20sp"
             app:layout_constraintEnd_toEndOf="parent"
@@ -836,7 +815,7 @@
                     android:src="@drawable/baseline_stop_circle_45" />
             </LinearLayout>
         </LinearLayout>
-        <!--      COMMENT- -->
+
         <View
             android:id="@+id/divider10"
             android:layout_width="409dp"
@@ -853,7 +832,7 @@
             android:layout_width="290dp"
             android:layout_height="wrap_content"
             android:fontFamily="sans-serif-condensed"
-            android:text="@string/morning_adhkar_11"
+            android:text="@string/dua40_11"
             android:textColor="@color/app_main_color"
             android:textSize="20sp"
             app:layout_constraintEnd_toEndOf="parent"
@@ -918,7 +897,7 @@
                     android:src="@drawable/baseline_stop_circle_45" />
             </LinearLayout>
         </LinearLayout>
-        <!--      COMMENT- -->
+
         <View
             android:id="@+id/divider11"
             android:layout_width="409dp"
@@ -935,7 +914,7 @@
             android:layout_width="290dp"
             android:layout_height="wrap_content"
             android:fontFamily="sans-serif-condensed"
-            android:text="@string/morning_adhkar_12"
+            android:text="@string/dua40_12"
             android:textColor="@color/app_main_color"
             android:textSize="20sp"
             app:layout_constraintEnd_toEndOf="parent"
@@ -1017,7 +996,7 @@
             android:layout_width="290dp"
             android:layout_height="wrap_content"
             android:fontFamily="sans-serif-condensed"
-            android:text="@string/morning_adhkar_13"
+            android:text="@string/dua40_13"
             android:textColor="@color/app_main_color"
             android:textSize="20sp"
             app:layout_constraintEnd_toEndOf="parent"
@@ -1099,7 +1078,7 @@
             android:layout_width="290dp"
             android:layout_height="wrap_content"
             android:fontFamily="sans-serif-condensed"
-            android:text="@string/morning_adhkar_14"
+            android:text="@string/dua40_14"
             android:textColor="@color/app_main_color"
             android:textSize="20sp"
             app:layout_constraintEnd_toEndOf="parent"
@@ -1181,14 +1160,14 @@
             android:layout_width="290dp"
             android:layout_height="wrap_content"
             android:fontFamily="sans-serif-condensed"
-            android:text="@string/evening_adhkar_15"
+            android:text="@string/dua40_15"
             android:textColor="@color/app_main_color"
             android:textSize="20sp"
-            app:layout_constraintBottom_toTopOf="@id/set15"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.504"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/divider14" />
+            app:layout_constraintTop_toBottomOf="@id/divider14"
+            app:layout_constraintBottom_toTopOf="@id/set15"/>
         <LinearLayout
             android:id="@+id/set15"
             android:layout_width="300dp"
@@ -1263,14 +1242,14 @@
             android:layout_width="290dp"
             android:layout_height="wrap_content"
             android:fontFamily="sans-serif-condensed"
-            android:text="@string/evening_adhkar_16"
+            android:text="@string/dua40_16"
             android:textColor="@color/app_main_color"
             android:textSize="20sp"
-            app:layout_constraintBottom_toTopOf="@id/set16"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.504"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/divider15" />
+            app:layout_constraintTop_toBottomOf="@id/divider15"
+            app:layout_constraintBottom_toTopOf="@id/set16"/>
         <LinearLayout
             android:id="@+id/set16"
             android:layout_width="300dp"
@@ -1345,7 +1324,7 @@
             android:layout_width="290dp"
             android:layout_height="wrap_content"
             android:fontFamily="sans-serif-condensed"
-            android:text="@string/morning_adhkar_17"
+            android:text="@string/dua40_17"
             android:textColor="@color/app_main_color"
             android:textSize="20sp"
             app:layout_constraintEnd_toEndOf="parent"
@@ -1427,7 +1406,7 @@
             android:layout_width="290dp"
             android:layout_height="wrap_content"
             android:fontFamily="sans-serif-condensed"
-            android:text="@string/morning_adhkar_18"
+            android:text="@string/dua40_18"
             android:textColor="@color/app_main_color"
             android:textSize="20sp"
             app:layout_constraintEnd_toEndOf="parent"
@@ -1509,7 +1488,7 @@
             android:layout_width="290dp"
             android:layout_height="wrap_content"
             android:fontFamily="sans-serif-condensed"
-            android:text="@string/morning_adhkar_19"
+            android:text="@string/dua40_19"
             android:textColor="@color/app_main_color"
             android:textSize="20sp"
             app:layout_constraintEnd_toEndOf="parent"
@@ -1591,7 +1570,7 @@
             android:layout_width="290dp"
             android:layout_height="wrap_content"
             android:fontFamily="sans-serif-condensed"
-            android:text="@string/morning_adhkar_20"
+            android:text="@string/dua40_20"
             android:textColor="@color/app_main_color"
             android:textSize="20sp"
             app:layout_constraintEnd_toEndOf="parent"
@@ -1673,7 +1652,7 @@
             android:layout_width="290dp"
             android:layout_height="wrap_content"
             android:fontFamily="sans-serif-condensed"
-            android:text="@string/morning_adhkar_21"
+            android:text="@string/dua40_21"
             android:textColor="@color/app_main_color"
             android:textSize="20sp"
             app:layout_constraintEnd_toEndOf="parent"
@@ -1755,7 +1734,7 @@
             android:layout_width="290dp"
             android:layout_height="wrap_content"
             android:fontFamily="sans-serif-condensed"
-            android:text="@string/morning_adhkar_22"
+            android:text="@string/dua40_22"
             android:textColor="@color/app_main_color"
             android:textSize="20sp"
             app:layout_constraintEnd_toEndOf="parent"
@@ -1820,5 +1799,1482 @@
                     android:src="@drawable/baseline_stop_circle_45" />
             </LinearLayout>
         </LinearLayout>
+
+        <View
+            android:id="@+id/divider22"
+            android:layout_width="409dp"
+            android:layout_height="1dp"
+            android:layout_marginTop="4dp"
+            android:background="?android:attr/listDivider"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/set22"
+            app:layout_constraintBottom_toTopOf="@id/textView23"/>
+
+        <TextView
+            android:id="@+id/textView23"
+            android:layout_width="290dp"
+            android:layout_height="wrap_content"
+            android:fontFamily="sans-serif-condensed"
+            android:text="@string/dua40_23"
+            android:textColor="@color/app_main_color"
+            android:textSize="20sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.504"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/divider22"
+            app:layout_constraintBottom_toTopOf="@id/set23"/>
+        <LinearLayout
+            android:id="@+id/set23"
+            android:layout_width="300dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="horizontal"
+            app:layout_constraintBottom_toTopOf="@+id/divider22"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textView23">
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center">
+
+                <ImageButton
+                    android:id="@+id/playButton23"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:backgroundTint="#00FFFFFF"
+                    android:contentDescription="Play"
+                    android:onClick="playAudio"
+                    android:src="@drawable/baseline_play_circle_45" />
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center">
+
+                <ImageButton
+                    android:id="@+id/pauseButton23"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:backgroundTint="#00FFFFFF"
+                    android:contentDescription="Pause"
+                    android:onClick="pauseAudio"
+                    android:src="@drawable/baseline_pause_circle_45" />
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center">
+
+                <ImageButton
+                    android:id="@+id/stopButton23"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:backgroundTint="#00FFFFFF"
+                    android:contentDescription="Stop"
+                    android:onClick="stopAudio"
+                    android:src="@drawable/baseline_stop_circle_45" />
+            </LinearLayout>
+        </LinearLayout>
+
+        <View
+            android:id="@+id/divider23"
+            android:layout_width="409dp"
+            android:layout_height="1dp"
+            android:layout_marginTop="4dp"
+            android:background="?android:attr/listDivider"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/set23"
+            app:layout_constraintBottom_toTopOf="@id/textView24"/>
+
+        <TextView
+            android:id="@+id/textView24"
+            android:layout_width="290dp"
+            android:layout_height="wrap_content"
+            android:fontFamily="sans-serif-condensed"
+            android:text="@string/dua40_24"
+            android:textColor="@color/app_main_color"
+            android:textSize="20sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.504"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/divider23"
+            app:layout_constraintBottom_toTopOf="@id/set24"/>
+        <LinearLayout
+            android:id="@+id/set24"
+            android:layout_width="300dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="horizontal"
+            app:layout_constraintBottom_toTopOf="@+id/divider23"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textView24">
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center">
+
+                <ImageButton
+                    android:id="@+id/playButton24"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:backgroundTint="#00FFFFFF"
+                    android:contentDescription="Play"
+                    android:onClick="playAudio"
+                    android:src="@drawable/baseline_play_circle_45" />
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center">
+
+                <ImageButton
+                    android:id="@+id/pauseButton24"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:backgroundTint="#00FFFFFF"
+                    android:contentDescription="Pause"
+                    android:onClick="pauseAudio"
+                    android:src="@drawable/baseline_pause_circle_45" />
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center">
+
+                <ImageButton
+                    android:id="@+id/stopButton24"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:backgroundTint="#00FFFFFF"
+                    android:contentDescription="Stop"
+                    android:onClick="stopAudio"
+                    android:src="@drawable/baseline_stop_circle_45" />
+            </LinearLayout>
+        </LinearLayout>
+
+        <View
+            android:id="@+id/divider24"
+            android:layout_width="409dp"
+            android:layout_height="1dp"
+            android:layout_marginTop="4dp"
+            android:background="?android:attr/listDivider"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/set24"
+            app:layout_constraintBottom_toTopOf="@id/textView25"/>
+
+        <TextView
+            android:id="@+id/textView25"
+            android:layout_width="290dp"
+            android:layout_height="wrap_content"
+            android:fontFamily="sans-serif-condensed"
+            android:text="@string/dua40_25"
+            android:textColor="@color/app_main_color"
+            android:textSize="20sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.504"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/divider24"
+            app:layout_constraintBottom_toTopOf="@id/set25"/>
+        <LinearLayout
+            android:id="@+id/set25"
+            android:layout_width="300dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="horizontal"
+            app:layout_constraintBottom_toTopOf="@+id/divider24"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textView25">
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center">
+
+                <ImageButton
+                    android:id="@+id/playButton25"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:backgroundTint="#00FFFFFF"
+                    android:contentDescription="Play"
+                    android:onClick="playAudio"
+                    android:src="@drawable/baseline_play_circle_45" />
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center">
+
+                <ImageButton
+                    android:id="@+id/pauseButton25"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:backgroundTint="#00FFFFFF"
+                    android:contentDescription="Pause"
+                    android:onClick="pauseAudio"
+                    android:src="@drawable/baseline_pause_circle_45" />
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center">
+
+                <ImageButton
+                    android:id="@+id/stopButton25"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:backgroundTint="#00FFFFFF"
+                    android:contentDescription="Stop"
+                    android:onClick="stopAudio"
+                    android:src="@drawable/baseline_stop_circle_45" />
+            </LinearLayout>
+        </LinearLayout>
+
+        <View
+            android:id="@+id/divider25"
+            android:layout_width="409dp"
+            android:layout_height="1dp"
+            android:layout_marginTop="4dp"
+            android:background="?android:attr/listDivider"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/set25"
+            app:layout_constraintBottom_toTopOf="@id/textView26"/>
+
+        <TextView
+            android:id="@+id/textView26"
+            android:layout_width="290dp"
+            android:layout_height="wrap_content"
+            android:fontFamily="sans-serif-condensed"
+            android:text="@string/dua40_26"
+            android:textColor="@color/app_main_color"
+            android:textSize="20sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.504"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/divider25"
+            app:layout_constraintBottom_toTopOf="@id/set26"/>
+        <LinearLayout
+            android:id="@+id/set26"
+            android:layout_width="300dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="horizontal"
+            app:layout_constraintBottom_toTopOf="@+id/divider25"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textView26">
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center">
+
+                <ImageButton
+                    android:id="@+id/playButton26"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:backgroundTint="#00FFFFFF"
+                    android:contentDescription="Play"
+                    android:onClick="playAudio"
+                    android:src="@drawable/baseline_play_circle_45" />
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center">
+
+                <ImageButton
+                    android:id="@+id/pauseButton26"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:backgroundTint="#00FFFFFF"
+                    android:contentDescription="Pause"
+                    android:onClick="pauseAudio"
+                    android:src="@drawable/baseline_pause_circle_45" />
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center">
+
+                <ImageButton
+                    android:id="@+id/stopButton26"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:backgroundTint="#00FFFFFF"
+                    android:contentDescription="Stop"
+                    android:onClick="stopAudio"
+                    android:src="@drawable/baseline_stop_circle_45" />
+            </LinearLayout>
+        </LinearLayout>
+
+        <View
+            android:id="@+id/divider26"
+            android:layout_width="409dp"
+            android:layout_height="1dp"
+            android:layout_marginTop="4dp"
+            android:background="?android:attr/listDivider"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/set26"
+            app:layout_constraintBottom_toTopOf="@id/textView27"/>
+
+        <TextView
+            android:id="@+id/textView27"
+            android:layout_width="290dp"
+            android:layout_height="wrap_content"
+            android:fontFamily="sans-serif-condensed"
+            android:text="@string/dua40_27"
+            android:textColor="@color/app_main_color"
+            android:textSize="20sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.504"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/divider26"
+            app:layout_constraintBottom_toTopOf="@id/set27"/>
+        <LinearLayout
+            android:id="@+id/set27"
+            android:layout_width="300dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="horizontal"
+            app:layout_constraintBottom_toTopOf="@+id/divider26"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textView27">
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center">
+
+                <ImageButton
+                    android:id="@+id/playButton27"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:backgroundTint="#00FFFFFF"
+                    android:contentDescription="Play"
+                    android:onClick="playAudio"
+                    android:src="@drawable/baseline_play_circle_45" />
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center">
+
+                <ImageButton
+                    android:id="@+id/pauseButton27"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:backgroundTint="#00FFFFFF"
+                    android:contentDescription="Pause"
+                    android:onClick="pauseAudio"
+                    android:src="@drawable/baseline_pause_circle_45" />
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center">
+
+                <ImageButton
+                    android:id="@+id/stopButton27"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:backgroundTint="#00FFFFFF"
+                    android:contentDescription="Stop"
+                    android:onClick="stopAudio"
+                    android:src="@drawable/baseline_stop_circle_45" />
+            </LinearLayout>
+        </LinearLayout>
+
+        <View
+            android:id="@+id/divider27"
+            android:layout_width="409dp"
+            android:layout_height="1dp"
+            android:layout_marginTop="4dp"
+            android:background="?android:attr/listDivider"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/set27"
+            app:layout_constraintBottom_toTopOf="@id/textView28"/>
+
+        <TextView
+            android:id="@+id/textView28"
+            android:layout_width="290dp"
+            android:layout_height="wrap_content"
+            android:fontFamily="sans-serif-condensed"
+            android:text="@string/dua40_28"
+            android:textColor="@color/app_main_color"
+            android:textSize="20sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.504"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/divider27"
+            app:layout_constraintBottom_toTopOf="@id/set28"/>
+        <LinearLayout
+            android:id="@+id/set28"
+            android:layout_width="300dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="horizontal"
+            app:layout_constraintBottom_toTopOf="@+id/divider27"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textView28">
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center">
+
+                <ImageButton
+                    android:id="@+id/playButton28"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:backgroundTint="#00FFFFFF"
+                    android:contentDescription="Play"
+                    android:onClick="playAudio"
+                    android:src="@drawable/baseline_play_circle_45" />
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center">
+
+                <ImageButton
+                    android:id="@+id/pauseButton28"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:backgroundTint="#00FFFFFF"
+                    android:contentDescription="Pause"
+                    android:onClick="pauseAudio"
+                    android:src="@drawable/baseline_pause_circle_45" />
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center">
+
+                <ImageButton
+                    android:id="@+id/stopButton28"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:backgroundTint="#00FFFFFF"
+                    android:contentDescription="Stop"
+                    android:onClick="stopAudio"
+                    android:src="@drawable/baseline_stop_circle_45" />
+            </LinearLayout>
+        </LinearLayout>
+
+        <View
+            android:id="@+id/divider28"
+            android:layout_width="409dp"
+            android:layout_height="1dp"
+            android:layout_marginTop="4dp"
+            android:background="?android:attr/listDivider"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/set28"
+            app:layout_constraintBottom_toTopOf="@id/textView29"/>
+
+        <TextView
+            android:id="@+id/textView29"
+            android:layout_width="290dp"
+            android:layout_height="wrap_content"
+            android:fontFamily="sans-serif-condensed"
+            android:text="@string/dua40_29"
+            android:textColor="@color/app_main_color"
+            android:textSize="20sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.504"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/divider28"
+            app:layout_constraintBottom_toTopOf="@id/set29"/>
+        <LinearLayout
+            android:id="@+id/set29"
+            android:layout_width="300dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="horizontal"
+            app:layout_constraintBottom_toTopOf="@+id/divider28"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textView29">
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center">
+
+                <ImageButton
+                    android:id="@+id/playButton29"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:backgroundTint="#00FFFFFF"
+                    android:contentDescription="Play"
+                    android:onClick="playAudio"
+                    android:src="@drawable/baseline_play_circle_45" />
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center">
+
+                <ImageButton
+                    android:id="@+id/pauseButton29"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:backgroundTint="#00FFFFFF"
+                    android:contentDescription="Pause"
+                    android:onClick="pauseAudio"
+                    android:src="@drawable/baseline_pause_circle_45" />
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center">
+
+                <ImageButton
+                    android:id="@+id/stopButton29"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:backgroundTint="#00FFFFFF"
+                    android:contentDescription="Stop"
+                    android:onClick="stopAudio"
+                    android:src="@drawable/baseline_stop_circle_45" />
+            </LinearLayout>
+        </LinearLayout>
+
+        <View
+            android:id="@+id/divider29"
+            android:layout_width="409dp"
+            android:layout_height="1dp"
+            android:layout_marginTop="4dp"
+            android:background="?android:attr/listDivider"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/set29"
+            app:layout_constraintBottom_toTopOf="@id/textView30"/>
+
+        <TextView
+            android:id="@+id/textView30"
+            android:layout_width="290dp"
+            android:layout_height="wrap_content"
+            android:fontFamily="sans-serif-condensed"
+            android:text="@string/dua40_30"
+            android:textColor="@color/app_main_color"
+            android:textSize="20sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.504"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/divider29"
+            app:layout_constraintBottom_toTopOf="@id/set30"/>
+        <LinearLayout
+            android:id="@+id/set30"
+            android:layout_width="300dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="horizontal"
+            app:layout_constraintBottom_toTopOf="@+id/divider29"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textView30">
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center">
+
+                <ImageButton
+                    android:id="@+id/playButton30"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:backgroundTint="#00FFFFFF"
+                    android:contentDescription="Play"
+                    android:onClick="playAudio"
+                    android:src="@drawable/baseline_play_circle_45" />
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center">
+
+                <ImageButton
+                    android:id="@+id/pauseButton30"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:backgroundTint="#00FFFFFF"
+                    android:contentDescription="Pause"
+                    android:onClick="pauseAudio"
+                    android:src="@drawable/baseline_pause_circle_45" />
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center">
+
+                <ImageButton
+                    android:id="@+id/stopButton30"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:backgroundTint="#00FFFFFF"
+                    android:contentDescription="Stop"
+                    android:onClick="stopAudio"
+                    android:src="@drawable/baseline_stop_circle_45" />
+            </LinearLayout>
+        </LinearLayout>
+
+        <View
+            android:id="@+id/divider30"
+            android:layout_width="409dp"
+            android:layout_height="1dp"
+            android:layout_marginTop="4dp"
+            android:background="?android:attr/listDivider"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/set30"
+            app:layout_constraintBottom_toTopOf="@id/textView31"/>
+
+        <TextView
+            android:id="@+id/textView31"
+            android:layout_width="290dp"
+            android:layout_height="wrap_content"
+            android:fontFamily="sans-serif-condensed"
+            android:text="@string/dua40_31"
+            android:textColor="@color/app_main_color"
+            android:textSize="20sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.504"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/divider30"
+            app:layout_constraintBottom_toTopOf="@id/set31"/>
+        <LinearLayout
+            android:id="@+id/set31"
+            android:layout_width="300dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="horizontal"
+            app:layout_constraintBottom_toTopOf="@+id/divider30"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textView31">
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center">
+
+                <ImageButton
+                    android:id="@+id/playButton31"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:backgroundTint="#00FFFFFF"
+                    android:contentDescription="Play"
+                    android:onClick="playAudio"
+                    android:src="@drawable/baseline_play_circle_45" />
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center">
+
+                <ImageButton
+                    android:id="@+id/pauseButton31"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:backgroundTint="#00FFFFFF"
+                    android:contentDescription="Pause"
+                    android:onClick="pauseAudio"
+                    android:src="@drawable/baseline_pause_circle_45" />
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center">
+
+                <ImageButton
+                    android:id="@+id/stopButton31"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:backgroundTint="#00FFFFFF"
+                    android:contentDescription="Stop"
+                    android:onClick="stopAudio"
+                    android:src="@drawable/baseline_stop_circle_45" />
+            </LinearLayout>
+        </LinearLayout>
+
+        <View
+            android:id="@+id/divider31"
+            android:layout_width="409dp"
+            android:layout_height="1dp"
+            android:layout_marginTop="4dp"
+            android:background="?android:attr/listDivider"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/set31"
+            app:layout_constraintBottom_toTopOf="@id/textView32"/>
+
+        <TextView
+            android:id="@+id/textView32"
+            android:layout_width="290dp"
+            android:layout_height="wrap_content"
+            android:fontFamily="sans-serif-condensed"
+            android:text="@string/dua40_32"
+            android:textColor="@color/app_main_color"
+            android:textSize="20sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.504"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/divider31"
+            app:layout_constraintBottom_toTopOf="@id/set32"/>
+        <LinearLayout
+            android:id="@+id/set32"
+            android:layout_width="300dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="horizontal"
+            app:layout_constraintBottom_toTopOf="@+id/divider31"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textView32">
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center">
+
+                <ImageButton
+                    android:id="@+id/playButton32"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:backgroundTint="#00FFFFFF"
+                    android:contentDescription="Play"
+                    android:onClick="playAudio"
+                    android:src="@drawable/baseline_play_circle_45" />
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center">
+
+                <ImageButton
+                    android:id="@+id/pauseButton32"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:backgroundTint="#00FFFFFF"
+                    android:contentDescription="Pause"
+                    android:onClick="pauseAudio"
+                    android:src="@drawable/baseline_pause_circle_45" />
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center">
+
+                <ImageButton
+                    android:id="@+id/stopButton32"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:backgroundTint="#00FFFFFF"
+                    android:contentDescription="Stop"
+                    android:onClick="stopAudio"
+                    android:src="@drawable/baseline_stop_circle_45" />
+            </LinearLayout>
+        </LinearLayout>
+
+        <View
+            android:id="@+id/divider32"
+            android:layout_width="409dp"
+            android:layout_height="1dp"
+            android:layout_marginTop="4dp"
+            android:background="?android:attr/listDivider"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/set32"
+            app:layout_constraintBottom_toTopOf="@id/textView33"/>
+
+        <TextView
+            android:id="@+id/textView33"
+            android:layout_width="290dp"
+            android:layout_height="wrap_content"
+            android:fontFamily="sans-serif-condensed"
+            android:text="@string/dua40_33"
+            android:textColor="@color/app_main_color"
+            android:textSize="20sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.504"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/divider32"
+            app:layout_constraintBottom_toTopOf="@id/set33"/>
+        <LinearLayout
+            android:id="@+id/set33"
+            android:layout_width="300dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="horizontal"
+            app:layout_constraintBottom_toTopOf="@+id/divider32"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textView33">
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center">
+
+                <ImageButton
+                    android:id="@+id/playButton33"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:backgroundTint="#00FFFFFF"
+                    android:contentDescription="Play"
+                    android:onClick="playAudio"
+                    android:src="@drawable/baseline_play_circle_45" />
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center">
+
+                <ImageButton
+                    android:id="@+id/pauseButton33"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:backgroundTint="#00FFFFFF"
+                    android:contentDescription="Pause"
+                    android:onClick="pauseAudio"
+                    android:src="@drawable/baseline_pause_circle_45" />
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center">
+
+                <ImageButton
+                    android:id="@+id/stopButton33"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:backgroundTint="#00FFFFFF"
+                    android:contentDescription="Stop"
+                    android:onClick="stopAudio"
+                    android:src="@drawable/baseline_stop_circle_45" />
+            </LinearLayout>
+        </LinearLayout>
+
+        <View
+            android:id="@+id/divider33"
+            android:layout_width="409dp"
+            android:layout_height="1dp"
+            android:layout_marginTop="4dp"
+            android:background="?android:attr/listDivider"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/set33"
+            app:layout_constraintBottom_toTopOf="@id/textView34"/>
+
+        <TextView
+            android:id="@+id/textView34"
+            android:layout_width="290dp"
+            android:layout_height="wrap_content"
+            android:fontFamily="sans-serif-condensed"
+            android:text="@string/dua40_34"
+            android:textColor="@color/app_main_color"
+            android:textSize="20sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.504"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/divider33"
+            app:layout_constraintBottom_toTopOf="@id/set34"/>
+        <LinearLayout
+            android:id="@+id/set34"
+            android:layout_width="300dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="horizontal"
+            app:layout_constraintBottom_toTopOf="@+id/divider33"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textView34">
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center">
+
+                <ImageButton
+                    android:id="@+id/playButton34"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:backgroundTint="#00FFFFFF"
+                    android:contentDescription="Play"
+                    android:onClick="playAudio"
+                    android:src="@drawable/baseline_play_circle_45" />
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center">
+
+                <ImageButton
+                    android:id="@+id/pauseButton34"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:backgroundTint="#00FFFFFF"
+                    android:contentDescription="Pause"
+                    android:onClick="pauseAudio"
+                    android:src="@drawable/baseline_pause_circle_45" />
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center">
+
+                <ImageButton
+                    android:id="@+id/stopButton34"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:backgroundTint="#00FFFFFF"
+                    android:contentDescription="Stop"
+                    android:onClick="stopAudio"
+                    android:src="@drawable/baseline_stop_circle_45" />
+            </LinearLayout>
+        </LinearLayout>
+
+        <View
+            android:id="@+id/divider34"
+            android:layout_width="409dp"
+            android:layout_height="1dp"
+            android:layout_marginTop="4dp"
+            android:background="?android:attr/listDivider"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/set34"
+            app:layout_constraintBottom_toTopOf="@id/textView35"/>
+
+        <TextView
+            android:id="@+id/textView35"
+            android:layout_width="290dp"
+            android:layout_height="wrap_content"
+            android:fontFamily="sans-serif-condensed"
+            android:text="@string/dua40_35"
+            android:textColor="@color/app_main_color"
+            android:textSize="20sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.504"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/divider34"
+            app:layout_constraintBottom_toTopOf="@id/set35"/>
+        <LinearLayout
+            android:id="@+id/set35"
+            android:layout_width="300dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="horizontal"
+            app:layout_constraintBottom_toTopOf="@+id/divider34"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textView35">
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center">
+
+                <ImageButton
+                    android:id="@+id/playButton35"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:backgroundTint="#00FFFFFF"
+                    android:contentDescription="Play"
+                    android:onClick="playAudio"
+                    android:src="@drawable/baseline_play_circle_45" />
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center">
+
+                <ImageButton
+                    android:id="@+id/pauseButton35"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:backgroundTint="#00FFFFFF"
+                    android:contentDescription="Pause"
+                    android:onClick="pauseAudio"
+                    android:src="@drawable/baseline_pause_circle_45" />
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center">
+
+                <ImageButton
+                    android:id="@+id/stopButton35"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:backgroundTint="#00FFFFFF"
+                    android:contentDescription="Stop"
+                    android:onClick="stopAudio"
+                    android:src="@drawable/baseline_stop_circle_45" />
+            </LinearLayout>
+        </LinearLayout>
+
+        <View
+            android:id="@+id/divider35"
+            android:layout_width="409dp"
+            android:layout_height="1dp"
+            android:layout_marginTop="4dp"
+            android:background="?android:attr/listDivider"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/set35"
+            app:layout_constraintBottom_toTopOf="@id/textView36"/>
+
+        <TextView
+            android:id="@+id/textView36"
+            android:layout_width="290dp"
+            android:layout_height="wrap_content"
+            android:fontFamily="sans-serif-condensed"
+            android:text="@string/dua40_36"
+            android:textColor="@color/app_main_color"
+            android:textSize="20sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.504"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/divider35"
+            app:layout_constraintBottom_toTopOf="@id/set36"/>
+        <LinearLayout
+            android:id="@+id/set36"
+            android:layout_width="300dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="horizontal"
+            app:layout_constraintBottom_toTopOf="@+id/divider35"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textView36">
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center">
+
+                <ImageButton
+                    android:id="@+id/playButton36"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:backgroundTint="#00FFFFFF"
+                    android:contentDescription="Play"
+                    android:onClick="playAudio"
+                    android:src="@drawable/baseline_play_circle_45" />
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center">
+
+                <ImageButton
+                    android:id="@+id/pauseButton36"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:backgroundTint="#00FFFFFF"
+                    android:contentDescription="Pause"
+                    android:onClick="pauseAudio"
+                    android:src="@drawable/baseline_pause_circle_45" />
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center">
+
+                <ImageButton
+                    android:id="@+id/stopButton36"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:backgroundTint="#00FFFFFF"
+                    android:contentDescription="Stop"
+                    android:onClick="stopAudio"
+                    android:src="@drawable/baseline_stop_circle_45" />
+            </LinearLayout>
+        </LinearLayout>
+
+        <View
+            android:id="@+id/divider36"
+            android:layout_width="409dp"
+            android:layout_height="1dp"
+            android:layout_marginTop="4dp"
+            android:background="?android:attr/listDivider"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/set36"
+            app:layout_constraintBottom_toTopOf="@id/textView37"/>
+
+        <TextView
+            android:id="@+id/textView37"
+            android:layout_width="290dp"
+            android:layout_height="wrap_content"
+            android:fontFamily="sans-serif-condensed"
+            android:text="@string/dua40_37"
+            android:textColor="@color/app_main_color"
+            android:textSize="20sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.504"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/divider36"
+            app:layout_constraintBottom_toTopOf="@id/set37"/>
+        <LinearLayout
+            android:id="@+id/set37"
+            android:layout_width="300dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="horizontal"
+            app:layout_constraintBottom_toTopOf="@+id/divider36"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textView37">
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center">
+
+                <ImageButton
+                    android:id="@+id/playButton37"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:backgroundTint="#00FFFFFF"
+                    android:contentDescription="Play"
+                    android:onClick="playAudio"
+                    android:src="@drawable/baseline_play_circle_45" />
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center">
+
+                <ImageButton
+                    android:id="@+id/pauseButton37"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:backgroundTint="#00FFFFFF"
+                    android:contentDescription="Pause"
+                    android:onClick="pauseAudio"
+                    android:src="@drawable/baseline_pause_circle_45" />
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center">
+
+                <ImageButton
+                    android:id="@+id/stopButton37"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:backgroundTint="#00FFFFFF"
+                    android:contentDescription="Stop"
+                    android:onClick="stopAudio"
+                    android:src="@drawable/baseline_stop_circle_45" />
+            </LinearLayout>
+        </LinearLayout>
+
+        <View
+            android:id="@+id/divider37"
+            android:layout_width="409dp"
+            android:layout_height="1dp"
+            android:layout_marginTop="4dp"
+            android:background="?android:attr/listDivider"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/set37"
+            app:layout_constraintBottom_toTopOf="@id/textView38"/>
+
+        <TextView
+            android:id="@+id/textView38"
+            android:layout_width="290dp"
+            android:layout_height="wrap_content"
+            android:fontFamily="sans-serif-condensed"
+            android:text="@string/dua40_38"
+            android:textColor="@color/app_main_color"
+            android:textSize="20sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.504"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/divider37"
+            app:layout_constraintBottom_toTopOf="@id/set38"/>
+        <LinearLayout
+            android:id="@+id/set38"
+            android:layout_width="300dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="horizontal"
+            app:layout_constraintBottom_toTopOf="@+id/divider37"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textView38">
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center">
+
+                <ImageButton
+                    android:id="@+id/playButton38"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:backgroundTint="#00FFFFFF"
+                    android:contentDescription="Play"
+                    android:onClick="playAudio"
+                    android:src="@drawable/baseline_play_circle_45" />
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center">
+
+                <ImageButton
+                    android:id="@+id/pauseButton38"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:backgroundTint="#00FFFFFF"
+                    android:contentDescription="Pause"
+                    android:onClick="pauseAudio"
+                    android:src="@drawable/baseline_pause_circle_45" />
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center">
+
+                <ImageButton
+                    android:id="@+id/stopButton38"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:backgroundTint="#00FFFFFF"
+                    android:contentDescription="Stop"
+                    android:onClick="stopAudio"
+                    android:src="@drawable/baseline_stop_circle_45" />
+            </LinearLayout>
+        </LinearLayout>
+
+        <View
+            android:id="@+id/divider38"
+            android:layout_width="409dp"
+            android:layout_height="1dp"
+            android:layout_marginTop="4dp"
+            android:background="?android:attr/listDivider"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/set38"
+            app:layout_constraintBottom_toTopOf="@id/textView39"/>
+
+        <TextView
+            android:id="@+id/textView39"
+            android:layout_width="290dp"
+            android:layout_height="wrap_content"
+            android:fontFamily="sans-serif-condensed"
+            android:text="@string/dua40_39"
+            android:textColor="@color/app_main_color"
+            android:textSize="20sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.504"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/divider38"
+            app:layout_constraintBottom_toTopOf="@id/set39"/>
+        <LinearLayout
+            android:id="@+id/set39"
+            android:layout_width="300dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="horizontal"
+            app:layout_constraintBottom_toTopOf="@+id/divider38"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textView39">
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center">
+
+                <ImageButton
+                    android:id="@+id/playButton39"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:backgroundTint="#00FFFFFF"
+                    android:contentDescription="Play"
+                    android:onClick="playAudio"
+                    android:src="@drawable/baseline_play_circle_45" />
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center">
+
+                <ImageButton
+                    android:id="@+id/pauseButton39"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:backgroundTint="#00FFFFFF"
+                    android:contentDescription="Pause"
+                    android:onClick="pauseAudio"
+                    android:src="@drawable/baseline_pause_circle_45" />
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center">
+
+                <ImageButton
+                    android:id="@+id/stopButton39"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:backgroundTint="#00FFFFFF"
+                    android:contentDescription="Stop"
+                    android:onClick="stopAudio"
+                    android:src="@drawable/baseline_stop_circle_45" />
+            </LinearLayout>
+        </LinearLayout>
+
+        <View
+            android:id="@+id/divider39"
+            android:layout_width="409dp"
+            android:layout_height="1dp"
+            android:layout_marginTop="4dp"
+            android:background="?android:attr/listDivider"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/set39"
+            app:layout_constraintBottom_toTopOf="@id/textView40"/>
+
+        <TextView
+            android:id="@+id/textView40"
+            android:layout_width="290dp"
+            android:layout_height="wrap_content"
+            android:fontFamily="sans-serif-condensed"
+            android:text="@string/dua40_40"
+            android:textColor="@color/app_main_color"
+            android:textSize="20sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.504"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/divider39"
+            app:layout_constraintBottom_toTopOf="@id/set40"/>
+        <LinearLayout
+            android:id="@+id/set40"
+            android:layout_width="300dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="horizontal"
+            app:layout_constraintBottom_toTopOf="@+id/divider39"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textView40">
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center">
+
+                <ImageButton
+                    android:id="@+id/playButton40"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:backgroundTint="#00FFFFFF"
+                    android:contentDescription="Play"
+                    android:onClick="playAudio"
+                    android:src="@drawable/baseline_play_circle_45" />
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center">
+
+                <ImageButton
+                    android:id="@+id/pauseButton40"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:backgroundTint="#00FFFFFF"
+                    android:contentDescription="Pause"
+                    android:onClick="pauseAudio"
+                    android:src="@drawable/baseline_pause_circle_45" />
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center">
+
+                <ImageButton
+                    android:id="@+id/stopButton40"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:backgroundTint="#00FFFFFF"
+                    android:contentDescription="Stop"
+                    android:onClick="stopAudio"
+                    android:src="@drawable/baseline_stop_circle_45" />
+            </LinearLayout>
+        </LinearLayout>
+
     </androidx.constraintlayout.widget.ConstraintLayout>
 </ScrollView>

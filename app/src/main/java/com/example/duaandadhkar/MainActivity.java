@@ -29,4 +29,19 @@ public class MainActivity extends AppCompatActivity {
         Intent intent = new Intent(this, RuquiyaActivity.class);
         startActivity(intent);
     }
+    public void launch40Dua(View view){
+        Intent intent = new Intent(this, DuaBeginsWithRabbanaActivity.class);
+        startActivity(intent);
+    }
+    public void launchMissedRakahProcedure(View view){
+        Intent intent = new Intent(this, MissedRakahProcedureActivity.class);
+        startActivity(intent);
+    }
+
+    public void launchHajjAndUmrah(View view){
+        Intent intent = new Intent(this, HajjAndUmrahActivity.class);
+        startActivity(intent);
+    }
+
+
 }
