@@ -48,5 +48,10 @@ public class MainActivity extends AppCompatActivity {
         startActivity(intent);
     }
 
+    public void launchDailyEssentialDua(View view){
+        Intent intent = new Intent(this, DailyEssentialDuaActivity.class);
+        startActivity(intent);
+    }
+
 
 }

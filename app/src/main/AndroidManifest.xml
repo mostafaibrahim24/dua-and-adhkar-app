@@ -3,6 +3,7 @@
     xmlns:tools="http://schemas.android.com/tools">
 
     <uses-permission android:name="android.permission.POST_NOTIFICATIONS" />
+
     <application
         android:allowBackup="true"
         android:dataExtractionRules="@xml/data_extraction_rules"
@@ -12,7 +13,6 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Duaandadhkar"
         tools:targetApi="31">
-
         <activity
             android:name=".MainActivity"
             android:exported="true">
@@ -56,8 +56,13 @@
             android:name=".ReminderActivity"
             android:exported="false"
             android:label="Reminder"
+            android:parentActivityName=".MainActivity" />
+
+        <receiver android:name=".ReminderReceiver" />
+        <activity android:name=".DailyEssentialDuaActivity"
+            android:exported="false"
+            android:label="Daily Essential Dua"
             android:parentActivityName=".MainActivity"/>
-        <receiver android:name=".ReminderReceiver"/>
 
         <meta-data
             android:name="preloaded_fonts"
