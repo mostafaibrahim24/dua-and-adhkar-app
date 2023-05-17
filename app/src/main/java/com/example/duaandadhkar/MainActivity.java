@@ -43,5 +43,10 @@ public class MainActivity extends AppCompatActivity {
         startActivity(intent);
     }
 
+    public void launchReminder(View view){
+        Intent intent = new Intent(this, ReminderActivity.class);
+        startActivity(intent);
+    }
+
 
 }

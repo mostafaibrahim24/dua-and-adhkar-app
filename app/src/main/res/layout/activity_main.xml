@@ -73,17 +73,31 @@
             app:srcCompat="@drawable/hajjandumrah_button" />
 
         <ImageButton
-            android:id="@+id/r4MButton"
+            android:id="@+id/r4C1Button"
             android:layout_width="175dp"
             android:layout_height="175dp"
             android:layout_marginTop="8dp"
             android:backgroundTint="#00FFFFFF"
             android:onClick="launchMissedRakahProcedure"
             android:scaleType="fitCenter"
-            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/r3C1Button"
             app:srcCompat="@drawable/missed_rakah_button" />
+
+        <ImageButton
+            android:id="@+id/r4C2Button"
+            android:layout_width="175dp"
+            android:layout_height="175dp"
+            android:layout_marginTop="8dp"
+            android:backgroundTint="#00FFFFFF"
+            android:onClick="launchReminder"
+            android:scaleType="fitCenter"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/r3C2Button"
+            app:layout_constraintVertical_bias="0.0"
+            app:srcCompat="@drawable/reminder_button" />
 
         <ImageButton
             android:id="@+id/r1C2Button"

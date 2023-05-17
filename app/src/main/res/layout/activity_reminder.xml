@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center"
+    android:orientation="vertical"
+    tools:context=".ReminderActivity">
+    <ImageView
+        android:id="@+id/reminder_clipart"
+        android:layout_width="146dp"
+        android:layout_height="132dp"
+        android:layout_marginTop="16dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+
+        app:srcCompat="@drawable/reminder"
+        android:contentDescription="Reminder" />
+
+    <Button
+        android:id="@+id/selectTimeButton"
+        android:layout_width="200dp"
+        android:layout_height="70dp"
+        android:layout_marginHorizontal="26dp"
+        android:layout_marginTop="36dp"
+        android:fontFamily="@font/montserrat"
+        android:onClick="onSelectTime"
+        android:text="@string/reminder_select"
+        android:textSize="26sp" />
+
+    <Button
+        android:id="@+id/setReminderButton"
+        android:layout_width="200dp"
+        android:layout_height="70dp"
+        android:layout_marginHorizontal="26dp"
+        android:layout_marginTop="36dp"
+        android:fontFamily="@font/montserrat"
+        android:onClick="onSetReminder"
+        android:text="@string/reminder_set"
+        android:textSize="26sp" />
+
+    <Button
+        android:id="@+id/cancelReminderButton"
+        android:layout_width="200dp"
+        android:layout_height="70dp"
+        android:layout_marginHorizontal="26dp"
+        android:layout_marginTop="36dp"
+        android:backgroundTint="#BC3E3E"
+        android:fontFamily="@font/montserrat"
+        android:onClick="onCancelReminder"
+        android:text="@string/reminder_cancel"
+        android:textSize="26sp" />
+
+</LinearLayout>
